@@ -81,6 +81,9 @@ public class BookManagement {
                     System.out.println("Nhập trạng thái thay đổi");
                     boolean newStatus = Boolean.parseBoolean(input.nextLine());
                     listBooks.get(idChange - 1).setBookStatus(newStatus);
+                    for (Book book:listBooks) {
+                        book.displayData();
+                    }
                     break;
                 case 7:
                     System.exit(0);
