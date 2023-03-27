@@ -48,7 +48,6 @@ public class BookManagement {
                     break;
                 case 3:
                     Comparable comparable = new Comparable();
-                    System.out.println("Sắp xếp theo lợi nhuận tăng dần");
                     Collections.sort(listBooks, comparable);
                     for (Book book : listBooks) {
                         book.displayData();
@@ -70,7 +69,6 @@ public class BookManagement {
                         if (book.getBookName().contains(searchName)) {
                             listSerch.add(book);
                         }
-
                     }
                     for (Book book : listSerch) {
                         book.displayData();

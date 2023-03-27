@@ -120,18 +120,6 @@ public class Book implements IBook {
     }
     @Override
     public int compareTo(Book o){
-        return (int) (this.getInterest()-o.interest);
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookId=" + bookId +
-                ", bookName='" + bookName + '\'' +
-                ", title='" + title + '\'' +
-                ", numberOfPages=" + numberOfPages +
-                ", exportPrice=" + exportPrice +
-                ", bookStatus=" + bookStatus +
-                '}';
+        return (int) (o.getInterest()-this.interest);
     }
 }
