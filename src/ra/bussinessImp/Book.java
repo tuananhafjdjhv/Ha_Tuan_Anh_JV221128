@@ -5,7 +5,7 @@ import ra.bussiness.IBook;
 import java.util.List;
 import java.util.Scanner;
 
-public class Book implements IBook {
+public class Book implements IBook,Comparable<Book> {
     private int bookId;
     private String bookName;
     private String title;

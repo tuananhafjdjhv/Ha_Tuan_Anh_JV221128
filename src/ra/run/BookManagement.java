@@ -47,8 +47,11 @@ public class BookManagement {
                     }
                     break;
                 case 3:
-                    Comparable comparable = new Comparable();
-                    Collections.sort(listBooks, comparable);
+                    List<Book> newList = new ArrayList<>(listBooks);
+                    Collections.sort(newList);
+                    for (int i = 0; i < listBooks.size(); i++) {
+                        newList.add(listBooks.get(i));
+                    }
                     for (Book book : listBooks) {
                         book.displayData();
                     }
@@ -58,10 +61,11 @@ public class BookManagement {
                     int deleteId = Integer.parseInt(input.nextLine());
                     listBooks.remove(deleteId - 1);
                     System.out.println("Đã xóa");
-                    listBooks.toString();
+                    for (Book book:listBooks) {
+                        book.displayData();
+                    };
                     break;
                 case 5:
-                    List<Book> list = new ArrayList<>();
                     List<Book> listSerch = new ArrayList<>();
                     System.out.println("Nhập tên sách cần tìm kiếm");
                     String searchName = input.nextLine();
